@@ -1,0 +1,52 @@
+[SERVER] [INFO] Escolhendo b = 300323 (chave secreta)
+[SERVER] [INFO] Escutando em 127.0.0.1:50000
+[CLIENT] [INFO] Escolhendo a = 325516 (chave secreta)
+[CLIENT] [INFO] Conexão aberta em 127.0.0.1:50000
+[CLIENT] [INFO] Escolhendo p = 223481 e g = 140450
+[SERVER] [INFO] Conexão aceita em 127.0.0.1:35828
+[CLIENT] [INFO] Codificando p e g como 0x000368f9000224a2
+[CLIENT] [INFO] Enviando mensagem: 0x000368f9000224a2
+[SERVER] [INFO] Mensagem recebida: 0x000368f9000224a2
+[SERVER] [INFO] Decodificando 0x000368f9000224a2 como p = 223481, g = 140450
+[CLIENT] [INFO] Calculando A = 140450**325516 % 223481 = 208298
+[CLIENT] [INFO] Codificando A como 0x00032daa
+[CLIENT] [INFO] Enviando mensagem: 0x00032daa
+[SERVER] [INFO] Mensagem recebida: 0x00032daa
+[SERVER] [INFO] Decodificando 0x00032daa como A = 208298
+[SERVER] [INFO] Calculando B = 140450**300323 % 223481 = 118124
+[SERVER] [INFO] Codificando B como 0x0001cd6c
+[SERVER] [INFO] Enviando mensagem: 0x0001cd6c
+[CLIENT] [INFO] Mensagem recebida: 0x0001cd6c
+[CLIENT] [INFO] Decodificando 0x0001cd6c como B = 118124
+[SERVER] [INFO] Calculando s = 208298**300323 % 223481 = 101124 (chave compartilhada)
+[SERVER] [INFO] Entrando em modo Echo Server
+[SERVER] [INFO] Aguardando mensagem
+[CLIENT] [INFO] Calculando s = 118124**325516 % 223481 = 101124 (chave compartilhada)
+[CLIENT] [INFO] Testando troca de mensagens encriptadas usando a chave compartilhada s = 101124
+[CLIENT] [INFO] Mensagem de teste: Test Message!!!!
+[CLIENT] [INFO] Mensagem encriptada: 0xef5d06bc8e89c9ddbaa6df9fd5f8483a
+[CLIENT] [INFO] Enviando mensagem: 0xef5d06bc8e89c9ddbaa6df9fd5f8483a
+[SERVER] [INFO] Mensagem recebida: 0xef5d06bc8e89c9ddbaa6df9fd5f8483a
+[SERVER] [INFO] Mensagem decriptada: Test Message!!!!
+[SERVER] [INFO] Enviando mensagem de volta para o cliente (echo)
+[SERVER] [INFO] Mensagem encriptada: 0xef5d06bc8e89c9ddbaa6df9fd5f8483a
+[SERVER] [INFO] Enviando mensagem: 0xef5d06bc8e89c9ddbaa6df9fd5f8483a
+[SERVER] [INFO] Aguardando mensagem
+[CLIENT] [INFO] Mensagem recebida: 0xef5d06bc8e89c9ddbaa6df9fd5f8483a
+[CLIENT] [INFO] Mensagem decriptada: Test Message!!!!
+[CLIENT] [INFO] Mensagem recebida equivale a mensagem enviada
+[CLIENT] [INFO] Testando troca de mensagens encriptadas usando s = 763294 como chave para decriptação (caso de erro)
+[CLIENT] [INFO] Mensagem de teste: Test Message!!!!
+[CLIENT] [INFO] Mensagem encriptada: 0xef5d06bc8e89c9ddbaa6df9fd5f8483a
+[CLIENT] [INFO] Enviando mensagem: 0xef5d06bc8e89c9ddbaa6df9fd5f8483a
+[SERVER] [INFO] Mensagem recebida: 0xef5d06bc8e89c9ddbaa6df9fd5f8483a
+[SERVER] [INFO] Mensagem decriptada: Test Message!!!!
+[SERVER] [INFO] Enviando mensagem de volta para o cliente (echo)
+[SERVER] [INFO] Mensagem encriptada: 0xef5d06bc8e89c9ddbaa6df9fd5f8483a
+[SERVER] [INFO] Enviando mensagem: 0xef5d06bc8e89c9ddbaa6df9fd5f8483a
+[SERVER] [INFO] Aguardando mensagem
+[CLIENT] [INFO] Mensagem recebida: 0xef5d06bc8e89c9ddbaa6df9fd5f8483a
+[CLIENT] [INFO] Mensagem decriptada: 0xa46c5d01fa80a1e464fe80e07533cd86
+[CLIENT] [ERROR] Mensagem recebida difere da mensagem enviada
+[CLIENT] [INFO] Fechando conexão
+[SERVER] [INFO] Fechando conexão
