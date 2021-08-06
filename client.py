@@ -4,11 +4,14 @@ import socket
 import logging
 import des
 
+# Define o formato dos logs 
 FORMAT = '[CLIENT] [%(levelname)s] %(message)s'
 
+# Define o host como localhost e uma porta qualquer
 HOST = "127.0.0.1"
 PORT = 50000
 
+# Intervalo dos numeros gerados para a troca de chave
 MAX_NUM = 1e6
 MIN_NUM = 0
 
@@ -21,10 +24,12 @@ logger.setLevel(logging.INFO)
 a = random.randint(MIN_NUM, MAX_NUM)
 logger.info("Escolhendo a = %d (chave secreta)", a)
 
+# Cria um socket TCP/IP
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 addr = (HOST, PORT)
 
+# Conecta o socket na porta em que o server esta escutando
 sock.connect(addr)
 logger.info("Conexão aberta em %s:%d", addr[0], addr[1])
 
