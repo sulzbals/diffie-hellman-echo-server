@@ -34,10 +34,12 @@ sock.connect(addr)
 logger.info("Conexão aberta em %s:%d", addr[0], addr[1])
 
 try:
+    # Gera um primo aleatório para p e g mod p
     p = sympy.randprime(MIN_NUM, MAX_NUM)
     g = random.randint(MIN_NUM, MAX_NUM) % p
     logger.info("Escolhendo p = %d e g = %d", p, g)
 
+    # Codifica p e g em inteiros de 4 bytes cada e concatena
     msg = p.to_bytes(4, byteorder='big') + g.to_bytes(4, byteorder='big')
     logger.info("Codificando p e g como 0x%s", msg.hex())
 
